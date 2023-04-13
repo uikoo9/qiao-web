@@ -7,8 +7,22 @@
 
 ## install
 
+安装
+
 ```shell
 npm i qiao-qrcode
+```
+
+## use
+
+使用
+
+```javascript
+// cjs
+const { qrcodeCanvas } = require('qiao-qrcode');
+
+// mjs
+import { qrcodeCanvas } from 'qiao-qrcode';
 ```
 
 ## api
@@ -18,12 +32,8 @@ npm i qiao-qrcode
 用 canvas 生成二维码
 
 ```javascript
-// q
-var q = require('qiao-qrcode');
-
-// canvas
 // <div id="canvas"></div>
-q.qrcodeCanvas('canvas', 'https://insistime.com/');
+qrcodeCanvas('canvas', 'https://insistime.com/');
 ```
 
 ### qrcodeImg
@@ -31,12 +41,8 @@ q.qrcodeCanvas('canvas', 'https://insistime.com/');
 用 img 生成二维码
 
 ```javascript
-// q
-var q = require('qiao-qrcode');
-
-// img
 // <div id="img"></div>
-q.qrcodeImg('img', 'https://insistime.com/');
+qrcodeImg('img', 'https://insistime.com/');
 ```
 
 ### qrcodeSvg
@@ -44,15 +50,15 @@ q.qrcodeImg('img', 'https://insistime.com/');
 用 svg 生成二维码
 
 ```javascript
-// q
-var q = require('qiao-qrcode');
-
-// svg
 // <div id="svg"></div>
-q.qrcodeSvg('svg', 'https://insistime.com/');
+qrcodeSvg('svg', 'https://insistime.com/');
 ```
 
 ## version
+
+### 0.0.4.20230413
+
+1. 3.0.0
 
 ### 0.0.3.20221021
 

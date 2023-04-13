@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dist": "qwebpack build ./webpack/qiao.webpack.js"
+    "test": "qwebpack build ./webpack/qiao.webpack.js"
   },
   "nx": {
     "namedInputs": {

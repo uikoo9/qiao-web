@@ -5,7 +5,7 @@ const test = require('ava');
 const { JSDOM } = require('jsdom');
 
 // ls
-const { ls } = require('../index.js');
+const { ls, cache } = require('../index.js');
 
 // jsdom
 test.before(() => {
@@ -75,3 +75,27 @@ function getValue(key, time) {
     }, time);
   });
 }
+
+// cache
+test.serial('cache / set value, get value', (t) => {
+  const name = 'cache.group';
+  const key = 'team-123';
+  const value = true;
+
+  cache(name, key, value);
+  const res = cache(name, key);
+
+  t.true(res);
+});
+test.serial('cache / del value', (t) => {
+  const name = 'cache.group';
+  const key = 'team-123';
+  const value = true;
+
+  const res = cache(name, key);
+  t.true(res);
+
+  cache(name, key, null);
+  const res1 = cache(name, key);
+  t.falsy(res1);
+});

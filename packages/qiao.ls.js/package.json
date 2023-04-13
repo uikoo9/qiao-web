@@ -25,7 +25,8 @@
     "url": "https://github.com/uikoo9/qiao-web/issues"
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "ava"
   },
   "nx": {
     "namedInputs": {

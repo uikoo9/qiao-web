@@ -90,7 +90,6 @@ test.serial('cache / set value, get value', (t) => {
 test.serial('cache / del value', (t) => {
   const name = 'cache.group';
   const key = 'team-123';
-  const value = true;
 
   const res = cache(name, key);
   t.true(res);

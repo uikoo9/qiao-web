@@ -6,47 +6,40 @@
 
 浏览器 Cookie 相关操作封装，详见：[cookie 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie)
 
-## api
+## install
 
-### cjs
+安装
 
-```javascript
-// q
-const q = require('qiao.cookie.js');
-
-// get
-q.get('key');
-
-// set
-q.set('key', 'value');
-
-// del
-q.del('key');
-
-// has
-q.has('key');
-
-// keys
-q.keys();
+```shell
+npm i qiao.cookie.js
 ```
 
-### mjs
+## use
+
+使用
 
 ```javascript
-// q
-import { get, set, del, has, keys } from 'qiao.cookie.js';
+// cjs
+const { get } = require('qiao.cookie.js');
 
+// mjs
+import { get } from 'qiao.cookie.js';
+```
+
+## api
+
+```javascript
 // get
-get('key');
+get(key);
 
 // set
-set('key', value);
+set(key, value);
 
 // del
-del('key');
+del(key);
 
 // has
-has('key');
+has(key);
 
 // keys
 keys();

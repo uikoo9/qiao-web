@@ -10,7 +10,7 @@
 
 安装
 
-```bash
+```shell
 npm i qiao.ls.js
 ```
 

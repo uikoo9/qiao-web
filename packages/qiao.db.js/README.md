@@ -8,8 +8,20 @@
 
 ## install
 
-```bash
+```shell
 npm i qiao.db.js
+```
+
+## use
+
+使用
+
+```javascript
+// cjs
+const { openDB } = require('qiao.db.js');
+
+// mjs
+import { openDB } from 'qiao.db.js';
 ```
 
 ## api
@@ -18,274 +30,191 @@ npm i qiao.db.js
 
 打开一个数据库
 
+- databaseName
+  - 类型: string
+  - 说明: 数据库名称
+- return
+  - 类型: db
+  - 说明: 数据库实例
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  var databaseName = 'db_test';
-  var tableName = 't_test1';
-
-  try {
-    var db = await q.openDB(databaseName);
-    await q.clear(db, tableName);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await openDB(databaseName);
 ```
 
 ### listDB
 
 列出所有的本地数据库
 
+- return
+  - 类型: array
+  - 说明: 数据库库列表
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  try {
-    var dbs = await q.listDB();
-    console.log(dbs);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await listDB();
 ```
 
 ### delDB
 
 删除某个数据库
 
+- databaseName
+  - 类型: string
+  - 说明: 数据库名称
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  try {
-    var databaseName = 'db_test';
-    await q.delDB(databaseName);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await delDB(databaseName);
 ```
 
 ### createTable
 
 创建一个数据库表
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tables
+  - 类型: array
+  - 说明: 数据库表结构
+  - ```javascript
+    [
+      {
+        name: 't_test1',
+        key: 'id',
+        index: [
+          {
+            name: 'name',
+            index: 'name',
+            unique: false,
+          },
+        ],
+      },
+      ...
+    ];
+    ```
+- return
+  - 类型: res
+  - 说明:
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  var databaseName = 'db_test';
-  var tables = [
-    {
-      name: 't_test1',
-      key: 'id',
-      index: [
-        {
-          name: 'name',
-          index: 'name',
-          unique: false,
-        },
-      ],
-    },
-    {
-      name: 't_test2',
-      key: 'auto',
-      index: [
-        {
-          name: 'name',
-          index: 'name',
-          unique: false,
-        },
-        {
-          name: 'email',
-          index: ['name', 'email'],
-          unique: true,
-        },
-      ],
-    },
-  ];
-
-  try {
-    var db = await q.openDB(databaseName);
-    var res = await q.createTable(db, tables);
-    console.log(res);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await createTable(db, tables);
 ```
 
 ### delTable
 
 删除一个数据库表
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  try {
-    var databaseName = 'db_test';
-    var db = await q.openDB(databaseName);
-    await q.delTable(db, 't_test2');
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await delTable(db, tableName);
 ```
 
 ### save
 
 保存数据
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+- id
+  - 类型: number
+  - 说明: 表 id，存在则更新，不存在则新建
+- data
+  - 类型: object
+  - 说明: 数据
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  try {
-    var databaseName = 'db_test';
-    var db = await q.openDB(databaseName);
-
-    var tableName = 't_test1';
-    var data = { id: 1, name: '张三', age: 24, email: 'zhangsan@example.com' };
-    await q.save(db, tableName, data.id, data);
-
-    data.name = '1';
-    await q.save(db, tableName, data.id, data);
-
-    var data1 = { id: 2, name: '张三', age: 24, email: 'zhangsan@example.com' };
-    await q.save(db, tableName, data1.id, data1);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await save(db, tableName, data.id, data);
 ```
 
 ### get
 
 获取数据
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+- id
+  - 类型: number
+  - 说明: 表 id
+- return
+  - 类型: object
+  - 说明: 数据
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  var databaseName = 'db_test';
-  var tableName = 't_test1';
-
-  try {
-    var db = await q.openDB(databaseName);
-    var s = await q.get(db, tableName, 1);
-    console.log(s);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await get(db, tableName, id);
 ```
 
 ### del
 
 删除数据
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+- id
+  - 类型: number
+  - 说明: 表 id
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  var databaseName = 'db_test';
-  var tableName = 't_test1';
-
-  try {
-    var db = await q.openDB(databaseName);
-    await q.del(db, tableName, 2);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await del(db, tableName, id);
 ```
 
 ### clear
 
 清空数据
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  var databaseName = 'db_test';
-  var tableName = 't_test1';
-
-  try {
-    var db = await q.openDB(databaseName);
-    await q.clear(db, tableName);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await clear(db, tableName);
 ```
 
 ### getAll
 
 按索引获取所有数据
 
+- db
+  - 类型: db
+  - 说明: 数据库实例
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+- indexName
+  - 类型: string
+  - 说明: 数据库表名称
+- return
+  - 类型: array
+  - 说明: 数据列表
+
 ```javascript
-'use strict';
-
-var q = require('qiao.db.js');
-
-var test = async function () {
-  var databaseName = 'db_test';
-  var tableName = 't_test1';
-  var indexName = 'name';
-
-  try {
-    var db = await q.openDB(databaseName);
-    var s = await q.getAll(db, tableName, indexName);
-    console.log(s);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-test();
+await getAll(db, tableName, indexName);
 ```
 
 ## version
+
+### 0.1.2.20230413
+
+1. 3.0.0
 
 ### 0.1.1.20221012
 

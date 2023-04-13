@@ -1,0 +1,8 @@
+# project
+node_modules
+package-lock.json
+
+# packages
+packages/**/dist
+packages/**/__tests__
+packages/**/index.js

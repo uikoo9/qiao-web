@@ -5,7 +5,7 @@ const test = require('ava');
 const { JSDOM } = require('jsdom');
 
 // ls
-const { ls, cache } = require('../index.js');
+const { ls, cache } = require('./index.js');
 
 // jsdom
 test.before(() => {

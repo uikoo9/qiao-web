@@ -5,7 +5,7 @@ const test = require('ava');
 const { JSDOM } = require('jsdom');
 
 // cookie
-const { set, get, has, del, keys } = require('../index.js');
+const { set, get, has, del, keys } = require('./index.js');
 
 // jsdom
 test.before(() => {

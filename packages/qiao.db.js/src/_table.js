@@ -75,8 +75,15 @@ export const delTable = async (db, tableName) => {
   const newDB = await createDB(db);
   if (!newDB) return;
 
-  // del
+  // del on version change
   newDB.onversionchange = () => {
     newDB.deleteObjectStore(tableName);
   };
+
+  // del no version change
+  try {
+    newDB.deleteObjectStore(tableName);
+  } catch (e) {
+    /* empty */
+  }
 };

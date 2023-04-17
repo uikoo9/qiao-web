@@ -53,7 +53,7 @@ const delDB = (databaseName) => {
       resolve(true);
     };
     request.onblocked = () => {
-      reject(new Error('delete database blocked'));
+      reject(new Error('You should use it in the versionchange event callback, or after closing the database'));
     };
   });
 };
@@ -150,10 +150,17 @@ const delTable = async (db, tableName) => {
   const newDB$1 = await newDB(db);
   if (!newDB$1) return;
 
-  // del
+  // del on version change
   newDB$1.onversionchange = () => {
     newDB$1.deleteObjectStore(tableName);
   };
+
+  // del no version change
+  try {
+    newDB$1.deleteObjectStore(tableName);
+  } catch (e) {
+    /* empty */
+  }
 };
 
 /**
@@ -320,8 +327,8 @@ const DB = async (databaseName) => {
   obj.createTable = async (tables) => {
     return await createTable(obj.db, tables);
   };
-  obj.delTable = (tableName) => {
-    return delTable(obj.db, tableName);
+  obj.delTable = async (tableName) => {
+    await delTable(obj.db, tableName);
   };
 
   // data

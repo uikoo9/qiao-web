@@ -59,8 +59,6 @@ test.serial('table / create table', async (t) => {
     },
   ]);
 
-  // close
-  // db && db.db && db.db.close();
   t.truthy(createTableRes && createTableRes.length === 2);
 });
 test.serial('table / del table', async (t) => {
@@ -68,8 +66,6 @@ test.serial('table / del table', async (t) => {
   const db = t.context.db;
 
   // del table
-  const delTableRes = await db.delTable('t_test1');
-  t.log(delTableRes);
-  // t.true(delTableRes);
+  await db.delTable('t_test1');
   t.pass();
 });

@@ -51,7 +51,7 @@ export const delDB = (databaseName) => {
       resolve(true);
     };
     request.onblocked = () => {
-      reject(new Error('delete database blocked'));
+      reject(new Error('You should use it in the versionchange event callback, or after closing the database'));
     };
   });
 };

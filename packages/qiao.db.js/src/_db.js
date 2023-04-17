@@ -48,7 +48,10 @@ export const delDB = (databaseName) => {
       reject(event.target.error);
     };
     request.onsuccess = () => {
-      resolve();
+      resolve(true);
+    };
+    request.onblocked = () => {
+      reject(new Error('delete database blocked'));
     };
   });
 };

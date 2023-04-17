@@ -33,6 +33,14 @@ import { listDB, delDB, DB } from 'qiao.db.js';
 - return
   - 类型: array
   - 说明: 数据库库列表
+  - ```javascript
+    [
+      {
+        name: 'db',
+        version: 1,
+      },
+    ];
+    ```
 
 ```javascript
 await listDB();

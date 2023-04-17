@@ -50,7 +50,10 @@ const delDB = (databaseName) => {
       reject(event.target.error);
     };
     request.onsuccess = () => {
-      resolve();
+      resolve(true);
+    };
+    request.onblocked = () => {
+      reject(new Error('delete database blocked'));
     };
   });
 };
@@ -299,14 +302,56 @@ const getAll = (db, tableName, indexName) => {
   });
 };
 
-exports.clear = clear;
-exports.createTable = createTable;
-exports.del = del;
+// db
+
+/**
+ * db
+ * @param {*} databaseName
+ */
+const DB = async (databaseName) => {
+  const obj = {};
+
+  // db
+  obj.db = await openDB(databaseName);
+
+  // table
+  obj.createTable = async (tables) => {
+    return await createTable(obj.db, tables);
+  };
+  obj.delTable = async (tableName) => {
+    return await delTable(obj.db, tableName);
+  };
+
+  // data
+  obj.data = async (tableName, key, value) => {
+    return await data(obj.db, tableName, key, value);
+  };
+  obj.clear = async (tableName) => {
+    return await clear(obj.db, tableName);
+  };
+  obj.all = async (tableName, indexName) => {
+    return await getAll(obj.db, tableName, indexName);
+  };
+
+  return obj;
+};
+
+// data
+async function data(db, tableName, key, value) {
+  // del
+  if (value === null) {
+    return await del(db, tableName, key);
+  }
+
+  // get
+  if (typeof value == 'undefined') {
+    return await get(db, tableName, key);
+  }
+
+  // save
+  return await save(db, tableName, key, value);
+}
+
+exports.DB = DB;
 exports.delDB = delDB;
-exports.delTable = delTable;
-exports.get = get;
-exports.getAll = getAll;
 exports.listDB = listDB;
-exports.newDB = newDB;
-exports.openDB = openDB;
-exports.save = save;

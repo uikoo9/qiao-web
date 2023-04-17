@@ -53,6 +53,9 @@ await listDB();
 - databaseName
   - 类型: string
   - 说明: 数据库名称
+- return
+  - 类型: boolean
+  - 说明: 成功则返回 true
 
 ```javascript
 await delDB(databaseName);
@@ -97,8 +100,8 @@ const db = await DB(databaseName);
     ];
     ```
 - return
-  - 类型: res
-  - 说明:
+  - 类型: array
+  - 说明: 返回表示例数组
 
 ```javascript
 await db.createTable(tables);

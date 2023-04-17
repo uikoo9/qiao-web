@@ -8,7 +8,7 @@ const { JSDOM } = require('jsdom');
 const { indexedDB } = require('fake-indexeddb');
 
 // db
-const { listDB, delDB, DB } = require('./index.js');
+const { listDB, delDB, DB } = require('../index.js');
 
 // jsdom
 test.before(() => {
@@ -18,7 +18,7 @@ test.before(() => {
   global.indexedDB = indexedDB;
 });
 
-// test
+// db
 test.serial('db / create db', async (t) => {
   const db = await DB('db_to_del');
 
@@ -33,5 +33,5 @@ test.serial('db / list db', async (t) => {
 });
 test.serial('db / del db', async (t) => {
   const res = await delDB('db_to_del');
-  t.truthy(res);
+  t.true(res);
 });

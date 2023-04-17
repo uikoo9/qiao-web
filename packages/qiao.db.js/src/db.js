@@ -22,8 +22,8 @@ export const DB = async (databaseName) => {
   obj.createTable = async (tables) => {
     return await createTable(obj.db, tables);
   };
-  obj.delTable = async (tableName) => {
-    return await delTable(obj.db, tableName);
+  obj.delTable = (tableName) => {
+    return delTable(obj.db, tableName);
   };
 
   // data

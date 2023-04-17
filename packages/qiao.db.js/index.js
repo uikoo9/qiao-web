@@ -98,12 +98,7 @@ const createTable = async (db, tables) => {
     res.push(objectStore);
   }
 
-  // obj
-  const obj = {};
-  obj.res = res;
-  obj.db = newDB$1;
-
-  return obj;
+  return res;
 };
 
 // create new table
@@ -148,10 +143,17 @@ function createIndex(os, table) {
  * @returns
  */
 const delTable = async (db, tableName) => {
+  // check
   if (!db || !tableName) return;
 
+  // new
   const newDB$1 = await newDB(db);
-  newDB$1.deleteObjectStore(tableName);
+  if (!newDB$1) return;
+
+  // del
+  newDB$1.onversionchange = () => {
+    newDB$1.deleteObjectStore(tableName);
+  };
 };
 
 /**
@@ -318,8 +320,8 @@ const DB = async (databaseName) => {
   obj.createTable = async (tables) => {
     return await createTable(obj.db, tables);
   };
-  obj.delTable = async (tableName) => {
-    return await delTable(obj.db, tableName);
+  obj.delTable = (tableName) => {
+    return delTable(obj.db, tableName);
   };
 
   // data

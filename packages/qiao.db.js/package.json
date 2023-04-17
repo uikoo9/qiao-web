@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "test": "ava test.js"
+    "test": "ava"
   },
   "nx": {
     "namedInputs": {

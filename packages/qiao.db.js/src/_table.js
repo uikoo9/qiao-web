@@ -23,12 +23,7 @@ export const createTable = async (db, tables) => {
     res.push(objectStore);
   }
 
-  // obj
-  const obj = {};
-  obj.res = res;
-  obj.db = newDB;
-
-  return obj;
+  return res;
 };
 
 // create new table
@@ -73,8 +68,15 @@ function createIndex(os, table) {
  * @returns
  */
 export const delTable = async (db, tableName) => {
+  // check
   if (!db || !tableName) return;
 
+  // new
   const newDB = await createDB(db);
-  newDB.deleteObjectStore(tableName);
+  if (!newDB) return;
+
+  // del
+  newDB.onversionchange = () => {
+    newDB.deleteObjectStore(tableName);
+  };
 };

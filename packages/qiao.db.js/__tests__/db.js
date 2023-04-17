@@ -21,10 +21,12 @@ test.before(() => {
 // db
 test.serial('db / create db', async (t) => {
   const db = await DB('db_to_del');
+  t.log(`db version: ${db.db.version}`);
 
-  // close db for delete db
+  // close
   db && db.db && db.db.close();
 
+  //
   t.truthy(db);
 });
 test.serial('db / list db', async (t) => {

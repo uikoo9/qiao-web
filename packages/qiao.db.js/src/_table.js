@@ -8,8 +8,12 @@ import { newDB as createDB } from './_db.js';
  * @returns
  */
 export const createTable = async (db, tables) => {
+  // check
   if (!db || !tables || !tables.length) return null;
+
+  // new
   const newDB = await createDB(db);
+  if (!newDB) return;
 
   const res = [];
   for (let i = 0; i < tables.length; i++) {
@@ -23,7 +27,12 @@ export const createTable = async (db, tables) => {
     res.push(objectStore);
   }
 
-  return res;
+  // obj
+  const obj = {};
+  obj.res = res;
+  obj.db = newDB;
+
+  return obj;
 };
 
 // create new table
@@ -75,15 +84,12 @@ export const delTable = async (db, tableName) => {
   const newDB = await createDB(db);
   if (!newDB) return;
 
-  // del on version change
-  newDB.onversionchange = () => {
-    newDB.deleteObjectStore(tableName);
-  };
-
-  // del no version change
+  // del
   try {
+    console.log(2);
     newDB.deleteObjectStore(tableName);
   } catch (e) {
-    /* empty */
+    console.error('You should use it in the versionchange event callback');
+    console.error(e);
   }
 };

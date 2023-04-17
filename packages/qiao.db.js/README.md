@@ -81,7 +81,7 @@ const db = await DB(databaseName);
 创建一个数据库表
 
 - tables
-  - 类型: array
+  - 类型: object
   - 说明: 数据库表结构
   - ```javascript
     [
@@ -101,7 +101,22 @@ const db = await DB(databaseName);
     ```
 - return
   - 类型: array
-  - 说明: 返回表示例数组
+  - 说明: 返回表信息数组
+  - ```javascript
+    [
+      {
+        name: 't_test1',
+        key: 'id',
+        index: [
+          {
+            name: 'name',
+            index: 'name',
+            unique: false,
+          },
+        ],
+      },
+    ];
+    ```
 
 ```javascript
 await db.createTable(tables);

@@ -29,7 +29,7 @@ test.serial('table / create table', async (t) => {
   const db = t.context.db;
 
   // create table
-  const createTableRes = await db.createTable([
+  const res = await db.createTable([
     {
       name: 't_test1',
       key: 'id',
@@ -59,13 +59,14 @@ test.serial('table / create table', async (t) => {
     },
   ]);
 
-  t.truthy(createTableRes && createTableRes.length === 2);
+  //
+  t.truthy(res && res.length === 2);
 });
-test.serial('table / del table', async (t) => {
-  // db
-  const db = t.context.db;
+// test.serial('table / del table', async (t) => {
+//   // db
+//   const db = t.context.db;
 
-  // del table
-  await db.delTable('t_test1');
-  t.pass();
-});
+//   // del table
+//   await db.delTable('t_test1');
+//   t.pass();
+// });

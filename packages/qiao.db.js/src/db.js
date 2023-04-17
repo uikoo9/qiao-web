@@ -20,7 +20,11 @@ export const DB = async (databaseName) => {
 
   // table
   obj.createTable = async (tables) => {
-    return await createTable(obj.db, tables);
+    const res = await createTable(obj.db, tables);
+    if (!res || !res.db || !res.res) return;
+
+    obj.db = res.db;
+    return res.res;
   };
   obj.delTable = async (tableName) => {
     await delTable(obj.db, tableName);

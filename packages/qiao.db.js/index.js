@@ -83,8 +83,12 @@ const newDB = async (db) => {
  * @returns
  */
 const createTable = async (db, tables) => {
+  // check
   if (!db || !tables || !tables.length) return null;
+
+  // new
   const newDB$1 = await newDB(db);
+  if (!newDB$1) return;
 
   const res = [];
   for (let i = 0; i < tables.length; i++) {
@@ -98,7 +102,12 @@ const createTable = async (db, tables) => {
     res.push(objectStore);
   }
 
-  return res;
+  // obj
+  const obj = {};
+  obj.res = res;
+  obj.db = newDB$1;
+
+  return obj;
 };
 
 // create new table
@@ -150,16 +159,13 @@ const delTable = async (db, tableName) => {
   const newDB$1 = await newDB(db);
   if (!newDB$1) return;
 
-  // del on version change
-  newDB$1.onversionchange = () => {
-    newDB$1.deleteObjectStore(tableName);
-  };
-
-  // del no version change
+  // del
   try {
+    console.log(2);
     newDB$1.deleteObjectStore(tableName);
   } catch (e) {
-    /* empty */
+    console.error('You should use it in the versionchange event callback');
+    console.error(e);
   }
 };
 
@@ -325,7 +331,11 @@ const DB = async (databaseName) => {
 
   // table
   obj.createTable = async (tables) => {
-    return await createTable(obj.db, tables);
+    const res = await createTable(obj.db, tables);
+    if (!res || !res.db || !res.res) return;
+
+    obj.db = res.db;
+    return res.res;
   };
   obj.delTable = async (tableName) => {
     await delTable(obj.db, tableName);

@@ -1,35 +1,5 @@
-'use strict';
-
-/**
- * has
- * @param {*} sKey
- * @returns
- */
-const has = (sKey) => {
-  return new RegExp('(?:^|;\\s*)' + encodeURIComponent(sKey).replace(/[-.+*]/g, '\\$&') + '\\s*\\=').test(
-    document.cookie,
-  );
-};
-
-/* eslint-disable no-useless-escape */
-/* eslint-disable no-useless-backreference */
-
-/**
- * keys
- * @returns
- */
-const keys = () => {
-  // eslint-disable-next-line
-  const aKeys = document.cookie
-    .replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, '')
-    .split(/\s*(?:\=[^;]*)?;\s*/);
-  for (let nIdx = 0; nIdx < aKeys.length; nIdx++) {
-    aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]);
-  }
-  return aKeys;
-};
-
 // has
+import { has } from './has.js';
 
 /**
  * cookie
@@ -42,7 +12,7 @@ const keys = () => {
  *  bSecure
  * @returns
  */
-const cookie = (name, value, options) => {
+export const cookie = (name, value, options) => {
   // options
   options = options || {};
   const { sPath, sDomain } = options;
@@ -123,7 +93,3 @@ function delItem(sKey, sPath, sDomain) {
     (sPath ? '; path=' + sPath : '');
   return true;
 }
-
-exports.cookie = cookie;
-exports.has = has;
-exports.keys = keys;

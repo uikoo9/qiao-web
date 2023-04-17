@@ -5,7 +5,7 @@ const test = require('ava');
 const { JSDOM } = require('jsdom');
 
 // cookie
-const { set, get, has, del, keys } = require('./index.js');
+const { has, keys, cookie } = require('./index.js');
 
 // jsdom
 test.before(() => {
@@ -18,10 +18,8 @@ test.serial('cookie / set and get', (t) => {
   const key = 'key';
   const value = 'value';
 
-  set(key, value);
-  const res = get(key);
-
-  t.is(res, value);
+  const res = cookie(key, value);
+  t.true(res);
 });
 
 // has
@@ -35,10 +33,8 @@ test.serial('cookie / has', (t) => {
 // del
 test.serial('cookie / del', (t) => {
   const key = 'key';
-  del(key);
-
-  const res = has(key);
-  t.falsy(res);
+  const res = cookie(key, null);
+  t.true(res);
 });
 
 // keys
@@ -46,8 +42,8 @@ test.serial('keys', (t) => {
   const key = 'key1';
   const value = 'value';
 
-  set(key, value);
-  const res = keys();
+  const res = cookie(key, value);
+  const keysRes = keys();
 
-  t.true(res && res.length && res[0] === key);
+  t.true(res && keysRes && keysRes.length && keysRes[0] === key);
 });

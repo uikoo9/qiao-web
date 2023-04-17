@@ -20,29 +20,80 @@ npm i qiao.cookie.js
 
 ```javascript
 // cjs
-const { get } = require('qiao.cookie.js');
+const { cookie } = require('qiao.cookie.js');
 
 // mjs
-import { get } from 'qiao.cookie.js';
+import { cookie } from 'qiao.cookie.js';
 ```
 
 ## api
 
+## keys
+
+返回已经存在的 key 数组
+
+- return
+  - 类型: string[]
+  - 说明: 已经存在的 key 数组
+
+```javascript
+keys();
+```
+
+## has
+
+是否已经存在某一个 key
+
+- key
+  - 类型: string
+  - 说明: key
+- return
+  - 类型: boolean
+  - 说明: 结果，存在返回 true
+
+```javascript
+has(key);
+```
+
+## cookie
+
+获取，设置，删除数据
+
+- key
+  - 类型: string
+  - 说明: 只传入 key 时，获取信息
+- value
+  - 类型: any
+  - 说明:
+    - 设置信息时，传入 key 和 value
+    - 删除信息时传入 null
+- options
+  - 类型: object
+  - 说明: 其他配置项
+  - ```javascript
+    {
+      sPath,
+      sDomain,
+      vEnd,
+      bSecure,
+    }
+    ```
+- return
+  - 类型: any
+  - 说明: 获取信息是返回 value，其他返回 true 或者非 true
+
 ```javascript
 // get
-get(key);
+cookie(key);
 
 // set
-set(key, value);
+cookie(key, value);
+
+// set options
+cookie(key, value, options);
 
 // del
-del(key);
-
-// has
-has(key);
-
-// keys
-keys();
+cookie(key, null);
 ```
 
 ## version

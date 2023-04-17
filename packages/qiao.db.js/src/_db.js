@@ -1,25 +1,4 @@
 /**
- * open db
- * @param {*} databaseName
- * @param {*} version
- * @returns
- */
-export const openDB = (databaseName, version) => {
-  return new Promise((resolve, reject) => {
-    const request = version ? window.indexedDB.open(databaseName, version) : window.indexedDB.open(databaseName);
-    request.onerror = (event) => {
-      reject(event.target.error);
-    };
-    request.onsuccess = () => {
-      resolve(request.result);
-    };
-    request.onupgradeneeded = (event) => {
-      resolve(event.target.result);
-    };
-  });
-};
-
-/**
  * list db
  * @returns
  */
@@ -52,6 +31,27 @@ export const delDB = (databaseName) => {
     };
     request.onblocked = () => {
       reject(new Error('You should use it in the versionchange event callback, or after closing the database'));
+    };
+  });
+};
+
+/**
+ * open db
+ * @param {*} databaseName
+ * @param {*} version
+ * @returns
+ */
+export const openDB = (databaseName, version) => {
+  return new Promise((resolve, reject) => {
+    const request = version ? window.indexedDB.open(databaseName, version) : window.indexedDB.open(databaseName);
+    request.onerror = (event) => {
+      reject(event.target.error);
+    };
+    request.onsuccess = () => {
+      resolve(request.result);
+    };
+    request.onupgradeneeded = (event) => {
+      resolve(event.target.result);
     };
   });
 };

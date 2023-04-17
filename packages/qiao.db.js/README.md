@@ -144,6 +144,9 @@ await db.delTable(tableName);
 - tableName
   - 类型: string
   - 说明: 数据库表名称
+- return
+  - 类型: boolean
+  - 说明: 成功则返回 true
 
 ```javascript
 await db.clear(tableName);

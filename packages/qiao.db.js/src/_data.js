@@ -53,7 +53,7 @@ export const del = (db, tableName, key) => {
       reject(event.target.error);
     };
     request.onsuccess = () => {
-      resolve();
+      resolve(true);
     };
   });
 };
@@ -73,7 +73,7 @@ export const clear = (db, tableName) => {
       reject(event.target.error);
     };
     request.onsuccess = () => {
-      resolve();
+      resolve(true);
     };
   });
 };

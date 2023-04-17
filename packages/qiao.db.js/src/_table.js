@@ -86,8 +86,8 @@ export const delTable = async (db, tableName) => {
 
   // del
   try {
-    console.log(2);
     newDB.deleteObjectStore(tableName);
+    return newDB;
   } catch (e) {
     console.error('You should use it in the versionchange event callback');
     console.error(e);

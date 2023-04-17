@@ -161,8 +161,8 @@ const delTable = async (db, tableName) => {
 
   // del
   try {
-    console.log(2);
     newDB$1.deleteObjectStore(tableName);
+    return newDB$1;
   } catch (e) {
     console.error('You should use it in the versionchange event callback');
     console.error(e);
@@ -338,7 +338,11 @@ const DB = async (databaseName) => {
     return res.res;
   };
   obj.delTable = async (tableName) => {
-    await delTable(obj.db, tableName);
+    const res = await delTable(obj.db, tableName);
+    if (!res) return;
+
+    obj.db = res;
+    return true;
   };
 
   // data

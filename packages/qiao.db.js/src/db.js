@@ -27,7 +27,11 @@ export const DB = async (databaseName) => {
     return res.res;
   };
   obj.delTable = async (tableName) => {
-    await delTable(obj.db, tableName);
+    const res = await delTable(obj.db, tableName);
+    if (!res) return;
+
+    obj.db = res;
+    return true;
   };
 
   // data

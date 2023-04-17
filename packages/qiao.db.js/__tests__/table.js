@@ -20,6 +20,9 @@ test.before(async (t) => {
 
   // db
   const db = await DB('db_for_table');
+  t.log(`db version: ${db.db.version}`);
+
+  // ctx
   t.context.db = db;
 });
 
@@ -29,6 +32,7 @@ test.serial('table / create table', async (t) => {
   const db = t.context.db;
 
   // create table
+  t.log(`db version before createTable: ${db.db.version}`);
   const res = await db.createTable([
     {
       name: 't_test1',
@@ -58,15 +62,20 @@ test.serial('table / create table', async (t) => {
       ],
     },
   ]);
+  t.log(`db version after createTable: ${db.db.version}`);
 
   //
   t.truthy(res && res.length === 2);
 });
-// test.serial('table / del table', async (t) => {
-//   // db
-//   const db = t.context.db;
+test.serial('table / del table', async (t) => {
+  // db
+  const db = t.context.db;
 
-//   // del table
-//   await db.delTable('t_test1');
-//   t.pass();
-// });
+  // del table
+  t.log(`db version after createTable: ${db.db.version}`);
+  const res = await db.delTable('t_test1');
+  t.log(`db version before createTable: ${db.db.version}`);
+
+  //
+  t.true(res);
+});

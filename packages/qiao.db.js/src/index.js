@@ -1,4 +1,5 @@
-export * from './_db.js';
-export * from './_table.js';
-export * from './_data.js';
-export * from './_index.js';
+// _db
+export { listDB, delDB } from './_db.js';
+
+// db
+export { DB } from './db.js';

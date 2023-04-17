@@ -18,28 +18,13 @@ npm i qiao.db.js
 
 ```javascript
 // cjs
-const { openDB } = require('qiao.db.js');
+const { listDB, delDB, DB } = require('qiao.db.js');
 
 // mjs
-import { openDB } from 'qiao.db.js';
+import { listDB, delDB, DB } from 'qiao.db.js';
 ```
 
 ## api
-
-### openDB
-
-打开一个数据库
-
-- databaseName
-  - 类型: string
-  - 说明: 数据库名称
-- return
-  - 类型: db
-  - 说明: 数据库实例
-
-```javascript
-await openDB(databaseName);
-```
 
 ### listDB
 
@@ -65,13 +50,25 @@ await listDB();
 await delDB(databaseName);
 ```
 
+### DB
+
+创建 DB 实例
+
+- databaseName
+  - 类型: string
+  - 说明: 数据库名称
+- return
+  - 类型: db
+  - 说明: DB 实例
+
+```javascript
+const db = await DB(databaseName);
+```
+
 ### createTable
 
 创建一个数据库表
 
-- db
-  - 类型: db
-  - 说明: 数据库实例
 - tables
   - 类型: array
   - 说明: 数据库表结构
@@ -96,106 +93,37 @@ await delDB(databaseName);
   - 说明:
 
 ```javascript
-await createTable(db, tables);
+await db.createTable(tables);
 ```
 
 ### delTable
 
 删除一个数据库表
 
-- db
-  - 类型: db
-  - 说明: 数据库实例
 - tableName
   - 类型: string
   - 说明: 数据库表名称
 
 ```javascript
-await delTable(db, tableName);
-```
-
-### save
-
-保存数据
-
-- db
-  - 类型: db
-  - 说明: 数据库实例
-- tableName
-  - 类型: string
-  - 说明: 数据库表名称
-- id
-  - 类型: number
-  - 说明: 表 id，存在则更新，不存在则新建
-- data
-  - 类型: object
-  - 说明: 数据
-
-```javascript
-await save(db, tableName, data.id, data);
-```
-
-### get
-
-获取数据
-
-- db
-  - 类型: db
-  - 说明: 数据库实例
-- tableName
-  - 类型: string
-  - 说明: 数据库表名称
-- id
-  - 类型: number
-  - 说明: 表 id
-- return
-  - 类型: object
-  - 说明: 数据
-
-```javascript
-await get(db, tableName, id);
-```
-
-### del
-
-删除数据
-
-- db
-  - 类型: db
-  - 说明: 数据库实例
-- tableName
-  - 类型: string
-  - 说明: 数据库表名称
-- id
-  - 类型: number
-  - 说明: 表 id
-
-```javascript
-await del(db, tableName, id);
+await db.delTable(tableName);
 ```
 
 ### clear
 
 清空数据
 
-- db
-  - 类型: db
-  - 说明: 数据库实例
 - tableName
   - 类型: string
   - 说明: 数据库表名称
 
 ```javascript
-await clear(db, tableName);
+await db.clear(tableName);
 ```
 
-### getAll
+### all
 
 按索引获取所有数据
 
-- db
-  - 类型: db
-  - 说明: 数据库实例
 - tableName
   - 类型: string
   - 说明: 数据库表名称
@@ -207,7 +135,30 @@ await clear(db, tableName);
   - 说明: 数据列表
 
 ```javascript
-await getAll(db, tableName, indexName);
+await db.all(tableName, indexName);
+```
+
+### data
+
+获取，设置，删除数据
+
+- tableName
+  - 类型: string
+  - 说明: 数据库表名称
+- key
+  - 类型: string
+  - 说明: 只传入 key 时，获取信息
+- value
+  - 类型: any
+  - 说明:
+    - 设置信息时，传入 key 和 value
+    - 删除信息时传入 null
+- return
+  - 类型: any
+  - 说明: 获取信息是返回 value，其他返回操作结果
+
+```javascript
+await db.data(tableName, key, value);
 ```
 
 ## version

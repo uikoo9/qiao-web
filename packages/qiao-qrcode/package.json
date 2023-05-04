@@ -25,7 +25,7 @@
     "url": "https://github.com/uikoo9/qiao-web/issues"
   },
   "dependencies": {
-    "qrcode": "^1.5.1"
+    "qrcode": "^1.5.3"
   },
   "scripts": {
     "build": "rollup -c",

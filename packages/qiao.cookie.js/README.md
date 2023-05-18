@@ -95,27 +95,3 @@ cookie(key, value, options);
 // del
 cookie(key, null);
 ```
-
-## version
-
-### 0.0.5.20230417
-
-1. 3.0.0
-
-### 0.0.4.20221014
-
-1. md
-
-### 0.0.3.20220712
-
-1. tree shaking
-
-### 0.0.2.20220709
-
-1. add rollup
-2. add eslint
-3. add jest
-
-### 0.0.1.20220616
-
-1. init project

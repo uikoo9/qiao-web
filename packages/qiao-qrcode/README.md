@@ -53,22 +53,3 @@ qrcodeImg('img', 'https://insistime.com/');
 // <div id="svg"></div>
 qrcodeSvg('svg', 'https://insistime.com/');
 ```
-
-## version
-
-### 0.0.4.20230413
-
-1. 3.0.0
-
-### 0.0.3.20221021
-
-1. add eslint
-2. 3.0.0
-
-### 0.0.2.20220415
-
-1. add lerna
-
-### 0.0.1.20220414
-
-1. init project

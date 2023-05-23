@@ -43,11 +43,15 @@ import { MobileArticle } from 'qiao-ui';
   - 类型: boolean
   - 说明: 是否新标签打开，默认为 false
 
+效果
+
+![link](https://static.insistime.com/15_insistime_code/static/qiao-ui/link.png)
+
+代码
+
 ```javascript
 <Link url={url} txt={txt} blank={true} />
 ```
-
-![link](https://static.insistime.com/15_insistime_code/static/qiao-ui/link.png)
 
 ## mobile
 

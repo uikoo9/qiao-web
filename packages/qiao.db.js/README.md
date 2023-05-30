@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/qiao.db.js.svg?style=flat-square)](https://www.npmjs.org/package/qiao.db.js)
 [![npm downloads](https://img.shields.io/npm/dm/qiao.db.js.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao.db.js)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/qiao.db.js)
 
 浏览器 IndexedDB 数据库常见 api 封装，详情：[一篇文章学会 IndexedDB](https://blog.insistime.com/indexeddb)
 

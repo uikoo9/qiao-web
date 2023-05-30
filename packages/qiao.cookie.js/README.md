@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/qiao.cookie.js.svg?style=flat-square)](https://www.npmjs.org/package/qiao.cookie.js)
 [![npm downloads](https://img.shields.io/npm/dm/qiao.cookie.js.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao.cookie.js)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/qiao.cookie.js)
 
 浏览器 Cookie 相关操作封装，详见：[cookie 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie)
 

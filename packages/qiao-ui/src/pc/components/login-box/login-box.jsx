@@ -22,17 +22,30 @@ export const LoginBox = (props) => {
   const [loginTips, setLoginTips] = useState('');
 
   // click login
-  const clickLogin = () => {
+  const clickLogin = async () => {
     colorLog('qiao-ui/pc/login-box: clickLogin');
 
-    props.loginClick(username, password, setTips, props.loginSucUrl);
-  };
+    // check
+    setLoginTips('');
+    if (!username) {
+      setLoginTips(props.usernameTip || 'need username');
+      return;
+    }
+    if (!password) {
+      setLoginTips(props.passwordTip || 'need password');
+      return;
+    }
 
-  // set tips
-  const setTips = (msg) => {
-    colorLog('qiao-ui/pc/login-box: setTips');
+    // login
+    const res = await props.loginApi(username, password);
+    if (!res || res.type !== 'success') {
+      setLoginTips(res.msg);
+      return;
+    }
 
-    setLoginTips(msg);
+    // suc
+    setLoginTips(res.msg);
+    props.loginCallback(res);
   };
 
   // return

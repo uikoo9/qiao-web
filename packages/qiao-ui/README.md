@@ -236,18 +236,24 @@ import { MobileArticle } from 'qiao-ui';
 - usernameHolder
   - 类型: string
   - 说明: 用户名占位
+- usernameTip
+  - 类型: string
+  - 说明: 用户名提示
 - passwordHolder
   - 类型: string
   - 说明: 用户密码占位
+- passwordTip
+  - 类型: string
+  - 说明: 用户密码提示
 - loginBtn
   - 类型: string
   - 说明: 登录按钮文字
-- loginSucUrl
-  - 类型: string
-  - 说明: 登录成功后跳转 url
-- loginClick
+- loginApi
   - 类型: function
-  - 说明: 点击登录事件
+  - 说明: 登录函数
+- loginCallback
+  - 类型: object
+  - 说明: 登录成功后返回的信息
 
 效果
 

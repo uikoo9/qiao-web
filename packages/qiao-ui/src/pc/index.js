@@ -26,6 +26,7 @@ export { Menus } from './components/menus/menus.jsx';
 export { Modal } from './components/modal/modal.jsx';
 export { Toolbar } from './components/toolbar/toolbar.jsx';
 export { Grid } from './components/grid/grid.jsx';
+export { Upload } from './components/upload/upload.jsx';
 export * from './components/grid/grid-fn.js';
 
 // blog

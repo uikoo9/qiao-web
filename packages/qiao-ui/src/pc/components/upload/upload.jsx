@@ -44,7 +44,10 @@ export const Upload = (props) => {
 
     // upload
     props
-      .post(props.uploadUrl, formData)
+      .post(props.uploadUrl, {
+        data: formData,
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
       .then((response) => {
         props.uploadSuccess(response);
       })

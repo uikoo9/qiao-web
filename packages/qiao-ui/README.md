@@ -320,3 +320,39 @@ import { MobileArticle } from 'qiao-ui';
   ...
 </Modal>
 ```
+
+### Upload
+
+上传组件
+
+- divClassName
+  - 类型: string
+  - 说明: 上传组件最外层div的className
+- post
+  - 类型: function
+  - 说明: 用来上传的post函数，可以使用axios.post等
+- uploadUrl
+  - 类型: string
+  - 说明: 上传的服务端地址
+- uploadSuccess
+  - 类型: function
+  - 说明: 上传成功的回调函数，返回response
+- uploadFail
+  - 类型: function
+  - 说明: 上传失败的回调函数，返回error
+
+效果
+
+![modal](https://static.insistime.com/15_insistime_code/static/qiao-ui/upload.png)
+
+代码
+
+```javascript
+<Upload
+  divClassName={'card add img-upload'}
+  post={post}
+  uploadUrl={uploadUrl}
+  uploadSuccess={uploadSuccess}
+  uploadFail={uploadFail}
+/>
+```

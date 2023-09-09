@@ -14,8 +14,8 @@ export const Upload = (props) => {
   // onchange
   const onChange = (e) => {
     // check props
-    if (!props.axios) {
-      colorLog('qiao-ui/pc/upload: need props.axios');
+    if (!props.post) {
+      colorLog('qiao-ui/pc/upload: need props.post');
       return;
     }
     if (!props.uploadUrl) {
@@ -43,7 +43,7 @@ export const Upload = (props) => {
     formData.append('file', files[0]);
 
     // upload
-    props.axios
+    props
       .post(props.uploadUrl, formData)
       .then((response) => {
         props.uploadSuccess(response);

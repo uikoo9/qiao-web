@@ -343,7 +343,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![modal](https://static.insistime.com/15_insistime_code/static/qiao-ui/upload.png)
+![upload](https://static.insistime.com/15_insistime_code/static/qiao-ui/upload.png)
 
 代码
 

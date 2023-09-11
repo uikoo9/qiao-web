@@ -1,5 +1,5 @@
 // react
-import React from 'react';
+import React, { useRef } from 'react';
 
 // log
 import { colorLog } from '../../../util/log.js';
@@ -10,6 +10,9 @@ import { colorLog } from '../../../util/log.js';
  */
 export const Upload = (props) => {
   colorLog('qiao-ui/pc/upload: render');
+
+  // ref
+  const inputFileRef = useRef(null);
 
   // onchange
   const onChange = (e) => {
@@ -43,6 +46,7 @@ export const Upload = (props) => {
     formData.append('file', files[0]);
 
     // upload
+    inputFileRef.current.value = '';
     props
       .post(props.uploadUrl, {
         data: formData,
@@ -58,7 +62,7 @@ export const Upload = (props) => {
 
   return (
     <div className={props.divClassName}>
-      <input type="file" onChange={onChange} />
+      <input type="file" ref={inputFileRef} onChange={onChange} />
     </div>
   );
 };

@@ -5,6 +5,7 @@ $modalMinHeight: 100px;
 $modalMaxHeight: 900px;
 
 .modal-container {
+  z-index: 97;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +15,7 @@ $modalMaxHeight: 900px;
   @include base.width();
 
   .modal {
+    z-index: 98;
     position: relative;
     width: $modalWidth;
     min-height: $modalMinHeight;
@@ -27,6 +29,7 @@ $modalMaxHeight: 900px;
   }
 
   .modal-close {
+    z-index: 99;
     position: absolute;
     top: 0;
     right: 0;

@@ -40,6 +40,7 @@ export const Upload = (props) => {
       colorLog('qiao-ui/pc/upload: need files');
       return;
     }
+    if (props.checkFile && !props.checkFile(files[0])) return;
 
     // form data
     const formData = new FormData();

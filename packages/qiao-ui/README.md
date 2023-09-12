@@ -331,6 +331,9 @@ import { MobileArticle } from 'qiao-ui';
 - post
   - 类型: function
   - 说明: 用来上传的post函数，可以使用axios.post等
+- checkFile
+  - 类型: function
+  - 说明: 参数为file，可以自己做校验，通过返回true即可
 - uploadUrl
   - 类型: string
   - 说明: 上传的服务端地址
@@ -351,6 +354,7 @@ import { MobileArticle } from 'qiao-ui';
 <Upload
   divClassName={'card add img-upload'}
   post={post}
+  checkFile={checkFile}
   uploadUrl={uploadUrl}
   uploadSuccess={uploadSuccess}
   uploadFail={uploadFail}

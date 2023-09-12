@@ -15,7 +15,7 @@ export const Alert = (props) => {
 
   const alert = (
     <div className="alert-container">
-      <div className="alert">{props.children}</div>
+      <div className="alert">{props.content}</div>
     </div>
   );
 

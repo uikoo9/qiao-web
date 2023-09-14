@@ -15,7 +15,10 @@ export const Viewer = (props) => {
 
   const alert = (
     <div className="viewer-container">
-      <img src={props.url} alt={props.alt} />
+      <div className="close" onClick={props.close}>
+        x
+      </div>
+      <img src={props.src} alt={props.alt} />
     </div>
   );
 

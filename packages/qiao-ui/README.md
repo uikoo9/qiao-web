@@ -43,7 +43,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![link](https://static.insistime.com/15_insistime_code/static/qiao-ui/link.png)
+![link](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/link.png)
 
 代码
 
@@ -64,7 +64,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![button](https://static.insistime.com/15_insistime_code/static/qiao-ui/button.png)
+![button](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/button.png)
 
 代码
 
@@ -88,7 +88,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![checkbox-list](https://static.insistime.com/15_insistime_code/static/qiao-ui/checkbox-list.png)
+![checkbox-list](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/checkbox-list.png)
 
 代码
 
@@ -130,7 +130,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![input](https://static.insistime.com/15_insistime_code/static/qiao-ui/input.png)
+![input](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/input.png)
 
 代码
 
@@ -154,7 +154,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![select](https://static.insistime.com/15_insistime_code/static/qiao-ui/select.png)
+![select](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/select.png)
 
 代码
 
@@ -189,7 +189,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![header](https://static.insistime.com/15_insistime_code/static/qiao-ui/header.png)
+![header](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/header.png)
 
 代码
 
@@ -216,7 +216,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![footer](https://static.insistime.com/15_insistime_code/static/qiao-ui/footer.png)
+![footer](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/footer.png)
 
 代码
 
@@ -257,7 +257,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![login](https://static.insistime.com/15_insistime_code/static/qiao-ui/login.png)
+![login](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/login.png)
 
 代码
 
@@ -281,7 +281,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![menus](https://static.insistime.com/15_insistime_code/static/qiao-ui/menus.png)
+![menus](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/menus.png)
 
 代码
 
@@ -305,7 +305,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![modal](https://static.insistime.com/15_insistime_code/static/qiao-ui/modal.png)
+![modal](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/modal.png)
 
 代码
 
@@ -346,7 +346,7 @@ import { MobileArticle } from 'qiao-ui';
 
 效果
 
-![upload](https://static.insistime.com/15_insistime_code/static/qiao-ui/upload.png)
+![upload](https://static.insistime.com/15_insistime_code/static/qiao-ui/imgs/upload.png)
 
 代码
 

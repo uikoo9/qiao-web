@@ -11,7 +11,7 @@ import { colorLog } from '../../../util/log.js';
  * cards
  */
 export const Cards = (props) => {
-  colorLog('qiao-ui/pc/cards: render');
+  colorLog('qiao-ui/all/cards: render');
 
   const cards =
     props.cards &&

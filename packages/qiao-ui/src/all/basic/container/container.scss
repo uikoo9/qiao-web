@@ -2,17 +2,6 @@
 
 // container
 @mixin container($width) {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  #root {
-    width: 100%;
-  }
-
   .container {
     width: $width;
     margin: 0 auto;

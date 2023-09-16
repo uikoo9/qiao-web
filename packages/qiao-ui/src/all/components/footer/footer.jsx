@@ -11,10 +11,10 @@ import { Link } from '../../../index.js';
 import { colorLog } from '../../../util/log.js';
 
 /**
- * mobile footer
+ * footer
  */
-export const MobileFooter = (props) => {
-  colorLog('qiao-ui/mobile/footer: render');
+export const Footer = (props) => {
+  colorLog('qiao-ui/all/footer: render');
 
   return (
     <div className="footer">

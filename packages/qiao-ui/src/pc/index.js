@@ -18,7 +18,6 @@ export { Viewer } from './basic/viewer/viewer.jsx';
 // index
 export { Content } from './components/content/content.jsx';
 export { Cards } from './components/cards/cards.jsx';
-export { Footer } from './components/footer/footer.jsx';
 
 // login
 export { LoginBox } from './components/login-box/login-box.jsx';

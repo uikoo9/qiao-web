@@ -9,7 +9,6 @@ export { MobileBreadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
 // index
 export { MobileContent } from './components/content/content.jsx';
 export { MobileCards } from './components/cards/cards.jsx';
-export { MobileFooter } from './components/footer/footer.jsx';
 
 // blog
 export { MobileInfo } from './components/info/info.jsx';

@@ -13,6 +13,7 @@ export { Modal } from './basic/modal/modal.jsx';
 // index
 export { Header } from './components/header/header.jsx';
 export { Footer } from './components/footer/footer.jsx';
+export { Content } from './components/content/content.jsx';
 
 // donate
 export { Donate } from './components/donate/donate.jsx';

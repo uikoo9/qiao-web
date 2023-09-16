@@ -7,7 +7,6 @@ export { MobileBreadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
  * components
  */
 // index
-export { MobileContent } from './components/content/content.jsx';
 export { MobileCards } from './components/cards/cards.jsx';
 
 // blog

@@ -16,7 +16,6 @@ export { Viewer } from './basic/viewer/viewer.jsx';
  * components
  */
 // index
-export { Content } from './components/content/content.jsx';
 export { Cards } from './components/cards/cards.jsx';
 
 // login

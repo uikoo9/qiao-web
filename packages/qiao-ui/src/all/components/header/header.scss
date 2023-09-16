@@ -61,7 +61,7 @@
 .mobile {
   $headerHeight: 2rem;
   $logoWidth: 6rem;
-  $navsWidth: calc(100% - $logoWidth);
+  $navsWidth: calc(16rem - $logoWidth);
   $navWidth: calc($navsWidth / 4);
 
   @include header($headerHeight, $logoWidth, $navsWidth, $navWidth);

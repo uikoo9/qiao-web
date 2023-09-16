@@ -1,6 +1,9 @@
 /**
  * basic
  */
+// container
+export { Container } from './basic/container/container.jsx';
+
 // link
 export { Link } from './basic/link/link.jsx';
 

@@ -15,9 +15,6 @@ export { Viewer } from './basic/viewer/viewer.jsx';
 /**
  * components
  */
-// login
-export { LoginBox } from './components/login-box/login-box.jsx';
-
 // manage
 export { Menus } from './components/menus/menus.jsx';
 export { Toolbar } from './components/toolbar/toolbar.jsx';

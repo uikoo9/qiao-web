@@ -21,3 +21,6 @@ export { Cards } from './components/cards/cards.jsx';
 
 // donate
 export { Donate } from './components/donate/donate.jsx';
+
+// login
+export { LoginBox } from './components/login-box/login-box.jsx';

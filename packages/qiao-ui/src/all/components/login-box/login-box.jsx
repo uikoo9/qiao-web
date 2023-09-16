@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import './login-box.scss';
 
 // components
-import { Input, Button, Tips } from '../../index.js';
+import { Input, Button, Tips } from '../../../index.js';
 
 // log
 import { colorLog } from '../../../util/log.js';
@@ -14,7 +14,7 @@ import { colorLog } from '../../../util/log.js';
  * login box
  */
 export const LoginBox = (props) => {
-  colorLog('qiao-ui/pc/login-box: render');
+  colorLog('qiao-ui/all/login-box: render');
 
   // state
   const [username, setUsername] = useState('');
@@ -23,7 +23,7 @@ export const LoginBox = (props) => {
 
   // click login
   const clickLogin = async () => {
-    colorLog('qiao-ui/pc/login-box: clickLogin');
+    colorLog('qiao-ui/all/login-box: clickLogin');
 
     // check
     setLoginTips('');

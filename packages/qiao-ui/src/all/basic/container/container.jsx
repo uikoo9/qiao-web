@@ -13,5 +13,9 @@ import { colorLog } from '../../../util/log.js';
 export const Container = (props) => {
   colorLog('qiao-ui/all/container: render');
 
-  return <div className="container">{props.children}</div>;
+  return (
+    <div className="container" style={{ width: props.width }}>
+      {props.children}
+    </div>
+  );
 };

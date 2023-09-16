@@ -11,10 +11,10 @@ import { Link } from '../../../index.js';
 import { colorLog } from '../../../util/log.js';
 
 /**
- * mobile header
+ * header
  */
-export const MobileHeader = (props) => {
-  colorLog('qiao-ui/mobile/header: render');
+export const Header = (props) => {
+  colorLog('qiao-ui/all/header: render');
 
   const navs =
     props.navs &&

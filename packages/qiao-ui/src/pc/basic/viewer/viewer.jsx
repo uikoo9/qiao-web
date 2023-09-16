@@ -13,7 +13,7 @@ import { colorLog } from '../../../util/log.js';
 export const Viewer = (props) => {
   colorLog('qiao-ui/pc/viewer: render');
 
-  const alert = (
+  const viewer = (
     <div className="viewer-container">
       <div className="close" onClick={props.close}>
         x
@@ -22,5 +22,5 @@ export const Viewer = (props) => {
     </div>
   );
 
-  return props.show ? alert : null;
+  return props.show ? viewer : null;
 };

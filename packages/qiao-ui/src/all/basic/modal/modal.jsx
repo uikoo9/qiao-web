@@ -8,9 +8,9 @@ import './modal.scss';
 import { colorLog } from '../../../util/log.js';
 
 /**
- * q modal
+ * modal
  */
-export const QModal = (props) => {
+export const Modal = (props) => {
   colorLog('qiao-ui/all/modal: render');
 
   const modal = (

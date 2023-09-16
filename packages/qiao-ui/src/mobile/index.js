@@ -2,6 +2,7 @@
  * basic
  */
 export { MobileBreadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
+export { MobileModal } from './basic/modal/modal.jsx';
 
 /**
  * components

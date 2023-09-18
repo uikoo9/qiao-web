@@ -1,6 +1,9 @@
 /**
  * basic
  */
+// alert
+export { Alert } from './basic/alert/alert.jsx';
+
 // container
 export { Container } from './basic/container/container.jsx';
 
@@ -9,6 +12,9 @@ export { Link } from './basic/link/link.jsx';
 
 // modal
 export { Modal } from './basic/modal/modal.jsx';
+
+// viewer
+export { Viewer } from './basic/viewer/viewer.jsx';
 
 /**
  * components

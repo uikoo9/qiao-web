@@ -1,7 +1,6 @@
 /**
  * basic
  */
-export { Alert } from './basic/alert/alert.jsx';
 export { Breadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
 export { Button } from './basic/button/button.jsx';
 export { CheckboxList } from './basic/checkbox-list/checkbox-list.jsx';
@@ -10,7 +9,6 @@ export { Select } from './basic/select/select.jsx';
 export { Table } from './basic/table/table.jsx';
 export { Tips } from './basic/tips/tips.jsx';
 export { Upload } from './basic/upload/upload.jsx';
-export { Viewer } from './basic/viewer/viewer.jsx';
 
 /**
  * components

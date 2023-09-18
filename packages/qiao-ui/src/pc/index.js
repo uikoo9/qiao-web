@@ -16,7 +16,6 @@ export { Viewer } from './basic/viewer/viewer.jsx';
  * components
  */
 // manage
-export { Menus } from './components/menus/menus.jsx';
 export { Toolbar } from './components/toolbar/toolbar.jsx';
 export { Grid } from './components/grid/grid.jsx';
 export * from './components/grid/grid-fn.js';

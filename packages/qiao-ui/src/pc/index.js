@@ -20,7 +20,6 @@ export * from './components/grid/grid-fn.js';
 // blog
 export { Info } from './components/info/info.jsx';
 export { InfoList } from './components/info-list/info-list.jsx';
-export { Article } from './components/article/article.jsx';
 
 /**
  * plugins

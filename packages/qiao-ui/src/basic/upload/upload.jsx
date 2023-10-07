@@ -40,11 +40,13 @@ export const Upload = (props) => {
       colorLog('qiao-ui/basic/upload: need files');
       return;
     }
-    if (props.checkFile && !props.checkFile(files[0])) return;
+    if (props.checkFiles && !props.checkFiles(files)) return;
 
     // form data
     const formData = new FormData();
-    formData.append('file', files[0]);
+    for (let i = 0; i < files.length; i++) {
+      formData.append('files', files[i]);
+    }
 
     // upload
     inputFileRef.current.value = '';
@@ -63,7 +65,7 @@ export const Upload = (props) => {
 
   return (
     <div className={props.divClassName}>
-      <input type="file" ref={inputFileRef} onChange={onChange} />
+      <input type="file" multiple ref={inputFileRef} onChange={onChange} />
     </div>
   );
 };

@@ -36,6 +36,9 @@ export { LoginBox } from './components/login-box/login-box.jsx';
 
 // manage
 export { Menus } from './components/menus/menus.jsx';
+export { Toolbar } from './components/toolbar/toolbar.jsx';
+export { Grid } from './components/grid/grid.jsx';
+export * from './components/grid/grid-fn.js';
 
 // blog
 export { Article } from './components/article/article.jsx';

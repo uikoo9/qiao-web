@@ -10,14 +10,6 @@ export { Tips } from './basic/tips/tips.jsx';
 export { Upload } from './basic/upload/upload.jsx';
 
 /**
- * components
- */
-// manage
-export { Toolbar } from './components/toolbar/toolbar.jsx';
-export { Grid } from './components/grid/grid.jsx';
-export * from './components/grid/grid-fn.js';
-
-/**
  * plugins
  */
 export { Editor } from './plugins/editor/editor.jsx';

@@ -44,3 +44,8 @@ export * from './components/grid/grid-fn.js';
 export { Article } from './components/article/article.jsx';
 export { Info } from './components/info/info.jsx';
 export { InfoList } from './components/info-list/info-list.jsx';
+
+/**
+ * plugins
+ */
+export { Editor } from './plugins/editor/editor.jsx';

@@ -16,12 +16,12 @@ import { colorLog } from '../../../util/log.js';
  * @returns
  */
 export const Editor = (props) => {
-  colorLog('qiao-ui/pc/editor: render');
+  colorLog('qiao-ui/all/editor: render');
 
   // editor
   const [editor, setEditor] = useState(null);
   useEffect(() => {
-    colorLog('qiao-ui/pc/editor: useEffect');
+    colorLog('qiao-ui/all/editor: useEffect');
 
     return () => {
       if (editor == null) return;

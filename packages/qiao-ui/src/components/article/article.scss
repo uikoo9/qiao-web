@@ -80,6 +80,8 @@
     }
 
     .article-content {
+      @include base.font();
+
       img {
         max-width: 100%;
       }

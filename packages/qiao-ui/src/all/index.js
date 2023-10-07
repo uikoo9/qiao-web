@@ -4,6 +4,9 @@
 // alert
 export { Alert } from './basic/alert/alert.jsx';
 
+// breadcrumbs
+export { Breadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
+
 // container
 export { Container } from './basic/container/container.jsx';
 

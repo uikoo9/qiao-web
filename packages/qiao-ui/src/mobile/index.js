@@ -1,9 +1,4 @@
 /**
- * basic
- */
-export { MobileBreadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
-
-/**
  * components
  */
 // blog

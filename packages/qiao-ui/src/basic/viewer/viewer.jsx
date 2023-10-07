@@ -5,7 +5,7 @@ import React from 'react';
 import './viewer.scss';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * viewer

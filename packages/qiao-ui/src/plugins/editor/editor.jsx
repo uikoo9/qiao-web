@@ -9,7 +9,7 @@ import { Editor as WangEditor, Toolbar } from '@wangeditor/editor-for-react';
 import { getEditorConfig, getToolbarConfig } from './editor-config.js';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * Editor

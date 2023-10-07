@@ -5,10 +5,10 @@ import React from 'react';
 import './info.scss';
 
 // ui
-import { Link } from '../../../index.js';
+import { Link } from '../../index.js';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * info

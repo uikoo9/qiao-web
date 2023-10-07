@@ -5,7 +5,7 @@ import React from 'react';
 import './select.scss';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * select

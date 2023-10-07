@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 import './login-box.scss';
 
 // components
-import { Input, Button, Tips } from '../../../index.js';
+import { Input, Button, Tips } from '../../index.js';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * login box

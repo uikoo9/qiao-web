@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // ui
-import { Table, Toolbar } from '../../../index.js';
+import { Table, Toolbar } from '../../index.js';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * grid

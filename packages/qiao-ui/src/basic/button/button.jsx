@@ -5,7 +5,7 @@ import React from 'react';
 import './button.scss';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * button

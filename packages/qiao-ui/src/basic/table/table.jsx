@@ -8,7 +8,7 @@ import './table.scss';
 import { getCols, getRows } from './table-fn.jsx';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * table

@@ -5,7 +5,7 @@ import React from 'react';
 import './checkbox-list.scss';
 
 // log
-import { colorLog } from '../../../util/log.js';
+import { colorLog } from '../../util/log.js';
 
 /**
  * checkbox list

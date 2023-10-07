@@ -17,10 +17,6 @@ export { Toolbar } from './components/toolbar/toolbar.jsx';
 export { Grid } from './components/grid/grid.jsx';
 export * from './components/grid/grid-fn.js';
 
-// blog
-export { Info } from './components/info/info.jsx';
-export { InfoList } from './components/info-list/info-list.jsx';
-
 /**
  * plugins
  */

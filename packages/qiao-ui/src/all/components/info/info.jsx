@@ -14,7 +14,7 @@ import { colorLog } from '../../../util/log.js';
  * info
  */
 export const Info = (props) => {
-  colorLog('qiao-ui/pc/info: render');
+  colorLog('qiao-ui/all/info: render');
 
   return (
     <div className="info">

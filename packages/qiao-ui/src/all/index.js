@@ -39,3 +39,5 @@ export { Menus } from './components/menus/menus.jsx';
 
 // blog
 export { Article } from './components/article/article.jsx';
+export { Info } from './components/info/info.jsx';
+export { InfoList } from './components/info-list/info-list.jsx';

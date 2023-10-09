@@ -28,7 +28,7 @@
     "qrcode": "^1.5.3"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "qpro rollup ./rollup.config.js",
     "test": "qwebpack build ./webpack/qiao.webpack.js"
   },
   "nx": {

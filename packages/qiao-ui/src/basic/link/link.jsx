@@ -11,7 +11,7 @@ import { colorLog } from '../../util/log.js';
  * link
  */
 export const Link = (props) => {
-  colorLog('qiao-ui/basic//link: render');
+  colorLog('qiao-ui/basic/link: render');
 
   return props.blank ? (
     <a href={props.url} className="q-link" target="_blank" rel="noreferrer">

@@ -6,6 +6,7 @@ export { Breadcrumbs } from './basic/breadcrumbs/breadcrumbs.jsx';
 export { Button } from './basic/button/button.jsx';
 export { CheckboxList } from './basic/checkbox-list/checkbox-list.jsx';
 export { Container } from './basic/container/container.jsx';
+export { ResponsiveContainer } from './basic/container/responsive-container.jsx';
 export { Input } from './basic/input/input.jsx';
 export { Link } from './basic/link/link.jsx';
 export { Modal } from './basic/modal/modal.jsx';

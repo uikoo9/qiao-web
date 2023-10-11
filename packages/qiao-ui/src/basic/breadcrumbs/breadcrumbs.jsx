@@ -11,7 +11,7 @@ import { colorLog } from '../../util/log.js';
  * breadcrumbs
  */
 export const Breadcrumbs = (props) => {
-  colorLog('qiao-ui/basic//breadcrumbs: render');
+  colorLog('qiao-ui/basic/breadcrumbs: render');
 
   const breadcrumbs = props.breadcrumbs;
   const breadcrumbsActiveId = props.breadcrumbsActiveId;

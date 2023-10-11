@@ -11,7 +11,7 @@ import { colorLog } from '../../util/log.js';
  * modal
  */
 export const Modal = (props) => {
-  colorLog('qiao-ui/basic//modal: render');
+  colorLog('qiao-ui/basic/modal: render');
 
   const modal = (
     <div className="modal-container">

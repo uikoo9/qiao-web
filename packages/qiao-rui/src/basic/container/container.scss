@@ -8,10 +8,10 @@
   }
 }
 
-.light {
+.pc {
   @include container();
 }
 
-.dark {
+.mobile {
   @include container();
 }

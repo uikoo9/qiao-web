@@ -2,6 +2,7 @@
  * basic
  */
 export { Container } from './basic/container/container.jsx';
+export { Link } from './basic/link/link.jsx';
 
 /**
  * components

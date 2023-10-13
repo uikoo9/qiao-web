@@ -5,14 +5,6 @@
 
 简洁小巧的 react ui 框架
 
-## 说明
-
-- [qiao-ui](https://www.npmjs.com/package/qiao-ui)
-  - pc端使用px实现
-  - 手机端使用rem实现
-- [qiao-rui](https://www.npmjs.com/package/qiao-ui)
-  - pc和手机端统一使用响应式实现
-
 ## install
 
 安装

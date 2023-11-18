@@ -53,3 +53,11 @@ qrcodeImg('img', 'https://insistime.com/');
 // <div id="svg"></div>
 qrcodeSvg('svg', 'https://insistime.com/');
 ```
+
+### qrcodeConsole
+
+nodejs console中生成二维码
+
+```javascript
+await qrcodeConsole(url);
+```

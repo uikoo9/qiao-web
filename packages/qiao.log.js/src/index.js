@@ -29,5 +29,5 @@ function log(logType, namespace, methodName, ...msg) {
     return;
   }
 
-  console.log(`qiao.log.js / ${logType} / ${namespace} / ${methodName} / `, ...msg);
+  console.log(`${namespace} / ${logType} / ${methodName} / `, ...msg);
 }

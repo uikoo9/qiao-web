@@ -1,8 +1,19 @@
-# qiao.log.js
+## qiao.log.js
+
+[![npm version](https://img.shields.io/npm/v/qiao.log.js.svg?style=flat-square)](https://www.npmjs.org/package/qiao.log.js)
+[![npm downloads](https://img.shields.io/npm/dm/qiao.log.js.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao.log.js)
 
 浏览器日志工具类
 
-## 使用
+## install
+
+```shell
+npm i qiao.log.js
+```
+
+## use
+
+使用
 
 ```js
 // Logger

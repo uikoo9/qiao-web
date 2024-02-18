@@ -7,7 +7,7 @@
     "ui"
   ],
   "author": "uikoo9 <uikoo9@qq.com>",
-  "homepage": "https://code.insistime.com/#qiao-ui",
+  "homepage": "https://qiao-ui.insistime.com/#/",
   "license": "MIT",
   "main": "src/index.js",
   "module": "src/index.js",

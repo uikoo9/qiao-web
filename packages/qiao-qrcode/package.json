@@ -25,7 +25,7 @@
     "url": "https://github.com/uikoo9/qiao-web/issues"
   },
   "dependencies": {
-    "qrcode": "^1.5.3"
+    "qrcode": "^1.5.4"
   },
   "scripts": {
     "build": "qpro rollup ./rollup.config.js",

@@ -27,7 +27,7 @@
     "fake-indexeddb": "^5.0.2",
     "husky": "^9.1.7",
     "jsdom": "^24.0.0",
-    "lerna": "^8.1.2",
+    "lerna": "^8.1.9",
     "lint-staged": "^15.2.10",
     "nx": "^18.0.7",
     "qiao-project": "^4.5.2",

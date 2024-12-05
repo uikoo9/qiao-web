@@ -33,7 +33,7 @@ import { qrcodeCanvas } from 'qiao-qrcode';
 
 ```javascript
 // <div id="canvas"></div>
-qrcodeCanvas('canvas', 'https://insistime.com/');
+qrcodeCanvas('canvas', 'https://vincentqiao.com/');
 ```
 
 ### qrcodeImg
@@ -42,7 +42,7 @@ qrcodeCanvas('canvas', 'https://insistime.com/');
 
 ```javascript
 // <div id="img"></div>
-qrcodeImg('img', 'https://insistime.com/');
+qrcodeImg('img', 'https://vincentqiao.com/');
 ```
 
 ### qrcodeSvg
@@ -51,7 +51,7 @@ qrcodeImg('img', 'https://insistime.com/');
 
 ```javascript
 // <div id="svg"></div>
-qrcodeSvg('svg', 'https://insistime.com/');
+qrcodeSvg('svg', 'https://vincentqiao.com/');
 ```
 
 ### qrcodeConsole

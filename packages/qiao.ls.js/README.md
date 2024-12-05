@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/qiao.ls.js.svg?style=flat-square)](https://www.npmjs.org/package/qiao.ls.js)
 [![npm downloads](https://img.shields.io/npm/dm/qiao.ls.js.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao.ls.js)
 
-浏览器 localStorage 本地存储常见 api 封装和增强，详情：[一篇文章学会 LocalStorage](https://blog.insistime.com/localstorage)
+浏览器 localStorage 本地存储常见 api 封装和增强，详情：[一篇文章学会 LocalStorage](https://blog.vincentqiao.com/localstorage)
 
 ## install
 
